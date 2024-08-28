@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#chatContainer {
+    width: 400px;
+    height: 600px;
+    margin: 50px auto;
+    background: #121010;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#chatHeader {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #c5a800;
+    color: #121010;
+    border-bottom: 1px solid #ddd;
+}
+
+#chatbotLogo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#chatbotName {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.chatbox {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between messages */
+}
+
+.message {
+    padding: 10px;
+    border-radius: 8px;
+    max-width: fit-content; /* Box size matches message size */
+    margin: 0; /* Remove margin */
+}
+
+.user-message {
+    background-color: #c5a800;
+    color: #121010;
+    align-self: flex-end; /* Align user messages to the right */
+    text-align: right; /* Right align text */
+}
+
+.bot-message {
+    background-color: #333333;
+    color: #ffffff;
+    align-self: flex-start; /* Align bot messages to the left */
+    text-align: left; /* Left align text */
+}
+
+.typing-indicator {
+    padding: 10px;
+    display: none;
+    font-style: italic;
+    color: #999;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#typingLogo {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+#inputContainer {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background: #2c2c2c;
+}
+
+.user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.submit-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #c5a800;
+    color: #121010;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #d8b30a;
+}
+
+.suggestions button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #c5a800;
+    color: #121010;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.suggestions button:hover {
+    background-color: #d8b30a;
+}
+
+.ticket-options {
+    margin-top: 20px;
+    color: #ffffff; /* Ensures text is visible against a dark background */
+}
+
+.ticket-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ticket-type label {
+    flex-grow: 1;
+    color: #ffffff; /* White color for visibility */
+}
+
+.increment {
+    display: flex;
+    align-items: center;
+}
+
+.increment button {
+    background-color: #ffc107; /* Same as button color for consistency */
+    color: #000; /* Black text on yellow button */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.increment button:hover {
+    background-color: #d4a00d; /* Slightly darker yellow on hover */
+}
+
+.increment input {
+    width: 50px;
+    text-align: center;
+    margin: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #333; /* Dark background for input */
+    color: #fff; /* White text for input field */
+}
+
+
+#previewBox {
+    border: 1px solid #c5a800;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#previewBox p {
+    margin: 5px 0;
+}
+
+#previewBox .header {
+    font-weight: bold;
+    color: #c5a800;
+    margin-bottom: 10px;
+}
